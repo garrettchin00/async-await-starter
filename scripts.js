@@ -1,8 +1,5 @@
 // helper function to semantically display the returned data
 function displayUsers(output, id, data){
-    // determine which container on the page we'll be dealing with/the call type
-    
-
     // to track the currently displayed page
     let currentPage = 1;
 
