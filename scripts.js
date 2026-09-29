@@ -49,8 +49,8 @@ function displayUsers(output, id, data){
             let profilePhoto = document.createElement("img");
 
             // set the image attributes so that it will display the correct image
-            profilePhoto.src = `${"TO DO"}`;
-            profilePhoto.alt = `${"TO DO"} ${"TO DO"}`;
+            profilePhoto.src = `${user.picture.large}`;
+            profilePhoto.alt = `${user.name.first} ${user.name.last}`;
             
             // add the image to the current user section
             userSection.appendChild(profilePhoto);
@@ -59,7 +59,7 @@ function displayUsers(output, id, data){
             let userName = document.createElement("h3");
             
             // add the name to the element
-            userName.textContent = `${"TO DO"} ${"TO DO"}`;
+            userName.textContent = `${user.name.first} ${user.name.last}`;
             
             // add the name to the section after the image
             userSection.appendChild(userName);
@@ -68,8 +68,8 @@ function displayUsers(output, id, data){
             let emailAddress = document.createElement("a");
             
             // set the link text and attributes
-            emailAddress.href = `mailto:${"TO DO"}`;
-            emailAddress.textContent = `${"TO DO"}`;
+            emailAddress.href = `mailto:${user.email}`;
+            emailAddress.textContent = `${user.email}`;
             
             // add the email address to the section
             userSection.appendChild(emailAddress);
