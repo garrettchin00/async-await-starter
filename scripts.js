@@ -234,10 +234,25 @@ fetch("https://randomuser.me/api/?results=12&nat=us,gb")
     })
     .catch(err =>{
         console.error(err);
-    })
+    });
 
 // async/await call to the same API
-// TO DO - Complete the code to call the API using an async function
+// Complete the code to call the API using an async function
+async function getUsers(){
+    let response = await fetch("https://randomuser.me/api/?results=12&nat=us,gb");
+
+    if(response.error){
+        throw new Error(response.error);
+    }
+
+    return await response.json();
+}
 
 // call our async function and handle the returned promise 
-// TO DO - Complete the code to handle the data returned from the API and display the returned data on the page in the correct place
+// Complete the code to handle the data returned from the API and display the returned data on the page in the correct place
+getUsers()
+    .then(json => {
+        console.log(json);
+        displayUsers("userPage2", "pagination2", json);
+    })
+    .catch(e => console.error(e.message));
