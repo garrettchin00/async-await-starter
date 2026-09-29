@@ -19,11 +19,22 @@ function displayUsers(output, id, data){
     let page4 = [];
 
     // split the returned data into four arrays, each will represent a "page" of users with three on each page
-    // TO DO: divide the data returned into four arrays
+    // divide the data returned into four arrays
+    for(let i = 0; i < 12; i++){
+        if(i < 3){
+            page1.push(data.results[i]);
+        }else if(i < 6){
+            page2.push(data.results[i]);
+        }else if(i < 9){
+            page3.push(data.results[i]);
+        }else{
+            page4.push(data.results[i]);
+        }
+    }
 
     // displays each user in a section, with semantic markup for their name, email address, and image
     function displayPage(currentPage){
-        // TO DO - complete the code to display the JSON data to the page
+        // complete the code to display the JSON data to the page
 
         // iterate through the data for the page's array and display it on the page
         for(let user of currentPage){
