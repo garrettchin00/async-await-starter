@@ -225,7 +225,13 @@ function displayUsers(output, id, data){
 
 // fetch call to the API
 // TO DO - Complete the code to call the API and display the returned data on the page in the correct place
-
+fetch("https://randomuser.me/api/?results=12&nat=us,gb")
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        console.log(data.results);
+        
+    })
 
 // async/await call to the same API
 // TO DO - Complete the code to call the API using an async function
