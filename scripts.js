@@ -230,7 +230,10 @@ fetch("https://randomuser.me/api/?results=12&nat=us,gb")
     .then(data => {
         console.log(data);
         console.log(data.results);
-        
+        displayUsers("userPage1", "pagination1", data);
+    })
+    .catch(err =>{
+        console.error(err);
     })
 
 // async/await call to the same API
